@@ -1,30 +1,44 @@
-user:
-  #username 学号或者工号
-  username: '161105024'
-  #tellphone 电话号码
-  tellphone: '15xxxxxxxx8'
-  #address 地址，定位信息
-  address: 中国xx省xx市xx县xx路
-  #email 接受通知消息的邮箱
-  email: 461009747@qq.com
-  #school 学校全称
-  school: 福州大学
-  #lon 当前位置经度
-  lon: '119.191475'
-  #lat 当前位置纬度
-  lat: '26.058264'
-  #abnormalReason 反馈信息，不需要可不填
-  abnormalReason: 在家
-  #photo 签到照片，不需要可不填
-  photo:
+
+        #登陆相关配置
+login:
+  #开放的模拟登陆api服务器地址
+  api: "http://www.zimo.wiki:8080/wisedu-unified-login-api-v1.0/api/login"
+#用户组配置
+users:
+  #单个用户配置
+  - user:
+      #username 学号或者工号
+      username: '2019000043'
+      #password 密码
+      password: '20010105qQ'
+      #address 地址，定位信息  中国河南省xx市xx区xx路
+      address: 中国山东省
+      #email 接受通知消息的邮箱
+      email: 1160521251@qq.com
+      #school 学校全称
+      school: 长春理工大学
+      #lon 经度
+      lon: '118.544257'
+      #lat 纬度
+      lat: '35.192326'
+      #abnormalReason 反馈信息
+      abnormalReason: 在家
+  #多用户配置，将下面的注释去掉即可，如果有表单内容有图片，不建议使用多用户配置
 #今日校园相关配置
 cpdaily:
+  #是否检查问题,true检查，false不检查
+  check: false
   #附加信息组默认选项配置，没有可留空
   defaults:
-    #附加信息组默认选项配置，按顺序，可留空
-    - default:
-        title: 晚检体温(必填)
-        value: 小于37.3度
-    - default:
-        title: 是否有发热、咳嗽、乏力、呼吸困难等疑似症状(必填)
-        value: 否
+  #附加信息组默认选项配置，按顺序，可留空
+  #    - default:
+  #        #表单项标题
+  #        title: 体温
+  #        #表单项默认值
+  #        value: 正常
+  #多个额外选项配置
+#    - default:
+#        #表单项标题
+#        title: 体温
+#        #表单项默认值
+#        value: 正常
